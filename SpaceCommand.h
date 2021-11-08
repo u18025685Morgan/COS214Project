@@ -8,7 +8,7 @@ using namespace std;
 
 class SpaceCommand{
 	public:
-		//print out Falcon Rockets
+		//pure virtual print out
 		virtual void print() = 0;
 		//
 		virtual ~SpaceCommand();
