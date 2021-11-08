@@ -25,3 +25,7 @@ void Rocket::launchRocket()
 {
     launch();
 }
+
+void Rocket::print(){
+    cout<<"This is a "<< getName() << " type Rocket"<<endl; 
+}
