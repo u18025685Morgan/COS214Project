@@ -2,9 +2,9 @@
 #include <iostream>
 #ifndef ROCKET_H
 #define ROCKET_H
+#include "SpaceCommand.h"
 
-
-class Rocket //The Product participant of the Factory Method design pattern.
+class Rocket : public SpaceCommand //The Product participant of the Factory Method design pattern.
 {
     private:
         std::string name; //A way to see with what type of rocket you are working with.
