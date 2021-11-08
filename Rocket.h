@@ -14,6 +14,7 @@ class Rocket : public SpaceCommand //The Product participant of the Factory Meth
         std::string getName();           //Returns the name/type of rocket.
         void setName(std::string n);     //Sets the name/type of rocket.
         void launchRocket();
+        void print();
     protected:
         virtual void launch() = 0;
 
