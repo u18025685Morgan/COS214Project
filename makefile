@@ -1,5 +1,5 @@
 
-ofiles = Rocket.o RocketFactory.o Falcon9Factory.o FalconHeavyFactory.o Falcon9.o FalconHeavy.o Main.o
+ofiles = Rocket.o RocketFactory.o Falcon9Factory.o FalconHeavyFactory.o Falcon9.o FalconHeavy.o Button.o CargoDragon.o Command.o CrewDragon.o Dragon.o Satellite.o Starlink.o TurnOff.o TurnOn.o Main.o
 gpp_o = g++ -c -std=c++11 -static
 
 main: $(ofiles)
@@ -25,6 +25,41 @@ Falcon9.o: Falcon9.h Falcon9.cpp Rocket.h
 
 FalconHeavy.o: FalconHeavy.h FalconHeavy.cpp Rocket.h
 	$(gpp_o) FalconHeavy.cpp
+
+
+
+
+Button.o: Button.h Button.cpp Command.h
+	$(gpp_o) Button.cpp
+
+CargoDragon.o: CargoDragon.h CargoDragon.cpp Dragon.h
+	$(gpp_o) CargoDragon.cpp
+
+Command.o: Command.h Command.cpp Rocket.h
+	$(gpp_o) Command.cpp
+
+CrewDragon.o: CrewDragon.h CrewDragon.cpp Dragon.h
+	$(gpp_o) CrewDragon.cpp
+
+Dragon.o: Dragon.h Dragon.cpp
+	$(gpp_o) Dragon.cpp
+
+GroundReceiver.o: GroundReceiver.h GroundReceiver.cpp
+	$(gpp_o) GroundReceiver.cpp
+
+Satellite.o: Satellite.h Satellite.cpp
+	$(gpp_o) Satellite.cpp
+
+Starlink.o: Starlink.h Starlink.cpp Satellite.h
+	$(gpp_o) Starlink.cpp
+
+TurnOff.o: TurnOff.h TurnOff.cpp Command.h
+	$(gpp_o) TurnOff.cpp
+
+TurnOn.o: TurnOn.h TurnOn.cpp Command.h
+	$(gpp_o) TurnOn.cpp
+
+
 
 run:  main
 	./main
