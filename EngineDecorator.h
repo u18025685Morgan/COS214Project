@@ -5,7 +5,7 @@
 class EngineDecorator : public Engine
 {
     private:
-        Engine* enginType; //Type of engine being used/worked with.
+        Engine* engine;
     public:
         EngineDecorator();
         virtual void operation();
