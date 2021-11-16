@@ -13,7 +13,8 @@ private:
 
 public:
     void changed();
-    void get();
+    SpaceCommand* get();
+    //get is supposed to return a spaceCOmmand pointer
     void set(SpaceCommand* sc);
 
 };
