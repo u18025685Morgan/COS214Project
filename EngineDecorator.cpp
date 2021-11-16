@@ -3,27 +3,27 @@ using namespace std;
 
 EngineDecorator::EngineDecorator()
 {
-    enginType = nullptr;
+    engine = nullptr;
 }
 
 Engine* EngineDecorator::getType()
 {
-    return engineType;
+    return engine;
 }
 
 void EngineDecorator::setType(Engine* e)
 {
     if (e != nullptr)
     {
-        engineType = e;
+        engine = e;
     }
 }
 
 EngineDecorator::~EngineDecorator()
 {
-    if (engineType != nullptr)
+    if (engine != nullptr)
     {
-        delete enginType;
+        delete engine;
     }
 }
 
