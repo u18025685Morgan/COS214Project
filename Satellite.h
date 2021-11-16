@@ -17,6 +17,7 @@ public:
     //get is supposed to return a spaceCOmmand pointer
     void set(SpaceCommand* sc);
     void launch();
+    void Communicate(Satellite *ab);
 
 };
 
