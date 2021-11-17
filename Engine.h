@@ -1,7 +1,8 @@
-#include <string>
-#include <iostream>
 #ifndef ENGINE_H
 #define ENGINE_H
+#include <string>
+#include <iostream>
+
 using namespace std;
 
 class Engine
