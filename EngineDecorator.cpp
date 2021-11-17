@@ -8,9 +8,9 @@ EngineDecorator::EngineDecorator()
     engine = nullptr;
 }
 
-void EngineDecorator::buildEngine(Engine* e)
+void EngineDecorator::addEngine(Engine* e)
 {
-    cout<<"Building a new engine"<<endl;
+    cout<<"Adding a new engine"<<endl;
 }
 
 Engine* EngineDecorator::getEngine()
