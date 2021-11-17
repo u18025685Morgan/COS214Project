@@ -1,4 +1,6 @@
 #include "EngineDecorator.h"
+#include <string>
+#include <iostream>
 #ifndef MERLINENGINE_H
 #define MERLINENGINE_H
 
