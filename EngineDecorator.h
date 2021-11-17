@@ -1,6 +1,6 @@
-#include "Engine.h"
 #ifndef ENGINEDECORATOR_H
 #define ENGINEDECORATOR_H
+#include "Engine.h"
 
 class EngineDecorator : public Engine
 {
