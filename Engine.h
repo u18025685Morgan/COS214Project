@@ -15,7 +15,7 @@ class Engine
         Engine(int n);                     //Constructor taking the number of engines as a parameter.
         Engine(string etype, int n);       //Constructor taking both the attributes of engines as parameters.
         virtual ~Engine();                 //Destructor
-        virtual void buildEngine(Engine* e) = 0;
+        virtual void addEngine(Engine* e) = 0;
         string getType();                  //Returns the type of engine being worked with.
         void setType(string et);           //Sets the type of engine.
         int getNumEngines();               //Returns the number of engines.
