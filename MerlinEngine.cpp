@@ -11,5 +11,10 @@ MerlinEngine::MerlinEngine():EngineDecorator()
 void MerlinEngine::setNum(int num){
       numEngines = num; 
 }
+
+int MerlinEngine::getNumEngines(){
+    return numEngines;
+}
+
 MerlinEngine::~MerlinEngine()
 {}
