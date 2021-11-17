@@ -12,7 +12,8 @@ class DroneShip : public SpaceCommand{
 		bool landed;
 	public:
 		DroneShip();
-		bool hasLanded();
+		void setLanded();
+		bool getLanded();
 		void print();
 	
 };
