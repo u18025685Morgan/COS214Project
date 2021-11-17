@@ -8,7 +8,7 @@ VacuumMerlinEngine::VacuumMerlinEngine(): EngineDecorator()
 {   
     //set type of engine to vacuumMerlin using inherited functions
     setType("VacuumMerlinEngine");
-    cout<<"Building a Vacuum Merlin Engine"<<endl;
+    cout<<"Adding a Vacuum Merlin Engine"<<endl;
 }
 
 VacuumMerlinEngine::~VacuumMerlinEngine()
