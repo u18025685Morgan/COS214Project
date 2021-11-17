@@ -1,4 +1,6 @@
 #include "EngineDecorator.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 EngineDecorator::EngineDecorator()
@@ -6,12 +8,17 @@ EngineDecorator::EngineDecorator()
     engine = nullptr;
 }
 
-Engine* EngineDecorator::getType()
+void EngineDecorator::buildEngine(Engine* e)
+{
+    cout<<"Building a new engine"<<endl;
+}
+
+Engine* EngineDecorator::getEngine()
 {
     return engine;
 }
 
-void EngineDecorator::setType(Engine* e)
+void EngineDecorator::setEngine(Engine* e)
 {
     if (e != nullptr)
     {
