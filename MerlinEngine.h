@@ -8,8 +8,6 @@ class MerlinEngine : public EngineDecorator
 {
     public:
         MerlinEngine();
-        void setNum(int num); 
-        int getNumEngines(); 
         ~MerlinEngine();
        
     private: 
