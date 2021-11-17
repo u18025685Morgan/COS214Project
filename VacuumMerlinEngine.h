@@ -1,8 +1,10 @@
 #include "EngineDecorator.h"
+#include <string>
+#include <iostream>
 #ifndef VACUUMMERLINENGINE_H
 #define VACUUMMERLINENGINE_H
 
-class MerlinEngine : public EngineDecorator
+class VacuumMerlinEngine : public EngineDecorator
 {
     public:
         VacuumMerlinEngine();
