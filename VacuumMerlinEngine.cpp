@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-VacuumMerlinEngine::VacuumMerlinEngine()
+VacuumMerlinEngine::VacuumMerlinEngine(): EngineDecorator()
 {   
     //set type of engine to vacuumMerlin using inherited functions
     setType("VacuumMerlinEngine");
