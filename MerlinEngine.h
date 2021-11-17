@@ -10,8 +10,6 @@ class MerlinEngine : public EngineDecorator
         MerlinEngine();
         ~MerlinEngine();
        
-    private: 
-        int numEngines;
 
 };
 
