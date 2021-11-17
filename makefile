@@ -1,5 +1,5 @@
 
-ofiles = Rocket.o RocketFactory.o Falcon9Factory.o FalconHeavyFactory.o Falcon9.o FalconHeavy.o Button.o CargoDragon.o Command.o CrewDragon.o Dragon.o Satellite.o Starlink.o TurnOff.o TurnOn.o Main.o
+ofiles = Rocket.o RocketFactory.o Falcon9Factory.o FalconHeavyFactory.o Falcon9.o FalconHeavy.o Button.o CargoDragon.o Command.o CrewDragon.o Dragon.o Satellite.o Starlink.o TurnOff.o TurnOn.o Engine.o  EngineDecorator.o MerlinEngine.o VacuumMerlinEngine.o Main.o
 gpp_o = g++ -c -std=c++11 -static
 
 main: $(ofiles)
@@ -58,6 +58,21 @@ TurnOff.o: TurnOff.h TurnOff.cpp Command.h
 
 TurnOn.o: TurnOn.h TurnOn.cpp Command.h
 	$(gpp_o) TurnOn.cpp
+	
+	
+	
+	
+Engine.o: Engine.h Engine.cpp
+	$(gpp_o) Engine.cpp
+
+EngineDecorator.o: EngineDecorator.h EngineDecorator.cpp Engine.h
+	$(gpp_o) EngineDecorator.cpp
+
+MerlinEngine.o: MerlinEngine.h MerlinEngine.cpp Engine.h EngineDecorator.h
+	$(gpp_o) MerlinEngine.cpp
+
+VacuumMerlineEngine.o: VacuumMerlinEngine.h VacuumMerlinEngine.cpp EngineDecorator.h Engine.h
+	$(gpp_o) VacuumMerlinEngine.cpp
 
 
 
