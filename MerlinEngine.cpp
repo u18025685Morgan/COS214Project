@@ -8,5 +8,8 @@ MerlinEngine::MerlinEngine():EngineDecorator()
     cout<<"Building a Merlin Engine"<<endl;
 }
 
+void MerlinEngine::setNum(int num){
+      numEngines = num; 
+}
 MerlinEngine::~MerlinEngine()
 {}
