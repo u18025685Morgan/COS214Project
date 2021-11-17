@@ -8,7 +8,12 @@ class VacuumMerlinEngine : public EngineDecorator
 {
     public:
         VacuumMerlinEngine();
+        void setNumEngines(int n);
+        int getNumEngines(); 
         ~VacuumMerlinEngine();
+        
+    private:
+        int numEngines;
 
 };
 
