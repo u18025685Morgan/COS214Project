@@ -20,6 +20,7 @@ class Engine
         void setType(string et);           //Sets the type of engine.
         int getNumEngines();               //Returns the number of engines.
         void setNumEngines(int nr);        //Sets the number of engines.
+        bool staticFireTest();              // a function to perform static fire test and return true if successful
 
 };
 
