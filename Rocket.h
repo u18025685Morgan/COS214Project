@@ -1,8 +1,8 @@
-#include <string>
-#include <iostream>
 #ifndef ROCKET_H
 #define ROCKET_H
 #include "SpaceCommand.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
 
