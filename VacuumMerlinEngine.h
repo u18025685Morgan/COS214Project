@@ -14,6 +14,7 @@ class VacuumMerlinEngine : public EngineDecorator
         
     private:
         int numEngines;
+        Engine* type;
 
 };
 
