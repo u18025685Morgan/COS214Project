@@ -6,7 +6,7 @@ using namespace std;
 MerlinEngine::MerlinEngine():EngineDecorator()
 {
     setType("MerlinEngine");
-    cout<<"Building a Merlin Engine"<<endl;
+    cout<<"Adding a Merlin Engine"<<endl;
 }
 
 MerlinEngine::~MerlinEngine()
