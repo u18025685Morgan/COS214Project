@@ -5,7 +5,7 @@ TestState::TestState(){
 	this->stageOneState = "testing";
 }
 void TestState::handle(){
-	cout << "Testing underway" << endl;
+	cout << "electronic test pass" << endl;
 }
 StageOneState* TestState::changeStageOneState(){
 	return new LaunchState();
