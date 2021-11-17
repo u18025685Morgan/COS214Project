@@ -8,6 +8,7 @@ class MerlinEngine : public EngineDecorator
 {
     public:
         MerlinEngine();
+        void setNum(); 
         ~MerlinEngine();
 
 };
