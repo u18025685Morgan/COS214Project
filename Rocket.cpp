@@ -1,4 +1,5 @@
 #include "Rocket.h"
+#include "RocketInitialState.h"
 
 #include <iostream>
 using namespace std;
@@ -39,4 +40,13 @@ void Rocket ::On() //command dp
 void Rocket ::Off() //command dp
 {
     cout << "Turning Rocket off\n";
+}
+
+bool Rocket ::staticFireTest(RocketInitialState* obj){
+    if (obj->getRocketState() == "ready"){
+            return true; 
+    }
+    else{
+        return false; 
+    }
 }
