@@ -25,4 +25,12 @@ class Engine
 
 };
 
+class Core : public Engine
+{
+    public:
+        virtual void addEngine(Engine* e)
+        {}
+
+};
+
 #endif
