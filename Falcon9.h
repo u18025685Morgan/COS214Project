@@ -1,7 +1,8 @@
 #ifndef FALCON9_H
 #define FALCON9_H
 #include "Rocket.h"
-
+#include <string>
+using namespace std;
 class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Method design pattern.
 {
     public:
