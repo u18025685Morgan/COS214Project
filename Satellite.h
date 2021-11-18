@@ -1,30 +1,38 @@
 //
-// Created by lisar on 2021/11/16.
+// Created by lisar on 2021/11/09.
 //
-
+/**
+ Colleague Participant of Mediator design pattern
+ ________Participant of Prototype pattern
+ * **/
 #ifndef SATELLITE_H
 #define SATELLITE_H
 
 #include "SpaceCommand.h"
 #include <string>
+
 class Satellite {
 private:
-    SpaceCommand* SC;
+    SpaceCommand* SC;               //mediator dp
+    string message;                 //mediator dp
     string name;
 
 public:
+    Satellite(SpaceCommand* sc, string name);                //mediator dp
+    Satellite(SpaceCommand* sc, string msg, string name);    //mediator dp
+    void MessageChanged();                      //mediator dp
+    string getMessage();                        //mediator dp
+    void setMessage(string msg);                //mediator dp
+
     Satellite(string name);
-    void changed();
-    SpaceCommand* get();
-    //get is supposed to return a spaceCOmmand pointer
-    void set(SpaceCommand* sc);
     void launch();
-    void Communicate(Satellite *ab);
+    void communicate(Satellite* ab);
     void setName(string n);
     string getName();
-    
 
+
+    
 };
 
 
-#endif //COS214PROJECT_MAIN_SATELLITE_H
+#endif //LISA_CODE_SATELLITE_H
