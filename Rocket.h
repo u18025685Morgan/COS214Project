@@ -1,7 +1,7 @@
 #ifndef ROCKET_H
 #define ROCKET_H
 #include "SpaceCommand.h"
-#include "InitialState.h"
+#include "RocketInitialState.h"
 #include <string>
 #include <iostream>
 
@@ -21,7 +21,7 @@ class Rocket : public SpaceCommand    //The Product participant of the Factory M
 
         void On();                    //turns Rocket on ->(Command dp)
         void Off();                   //turns Rocket off ->(Command dp)
-        bool staticFireTest(InitialState* obj); // function that checks state of rocket, if true then test successful
+        bool staticFireTest(RocketInitialState* obj); // function that checks state of rocket, if true then test successful
 
     protected:
         virtual void launch() = 0;
