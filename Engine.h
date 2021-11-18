@@ -2,8 +2,7 @@
 #define ENGINE_H
 #include <string>
 #include <iostream>
-#include "RocketState.h"
-#include "RocketLaunchState.h"
+
 
 
 using namespace std;
@@ -24,7 +23,7 @@ class Engine
         void setType(string et);           //Sets the type of engine.
         int getNumEngines();               //Returns the number of engines.
         void setNumEngines(int nr);        //Sets the number of engines.
-        bool staticFireTest(RocketState *obj);              // a function to perform static fire test and return true if successful
+      
 
 };
 
