@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace std;
 
-MerlinEngine::MerlinEngine():EngineDecorator()
+MerlinEngine::MerlinEngine(Engine* e):EngineDecorator(e)
 {
-    setType("MerlinEngine");
+    Engine::setType("MerlinEngine");
     cout<<"Adding a Merlin Engine"<<endl;
 }
 
