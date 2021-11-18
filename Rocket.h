@@ -28,7 +28,7 @@ class Rocket : public SpaceCommand    //The Product participant of the Factory M
 
         void On();                    //turns Rocket on ->(Command dp)
         void Off();                   //turns Rocket off ->(Command dp)
-        bool staticFireTest(RocketInitialState* obj); // function that checks state of rocket, if true then test successful
+        bool staticFireTest(RocketState* obj); // function that checks state of rocket, if true then test successful
 
     protected:
         virtual void launch() = 0;
