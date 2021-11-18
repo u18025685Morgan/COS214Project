@@ -46,7 +46,7 @@ void Rocket ::Off() //command dp
     cout << "Turning Rocket off\n";
 }
 
-bool Rocket ::staticFireTest(RocketInitialState* obj){
+bool Rocket ::staticFireTest(RocketState* obj){
     if (obj->getrocketState() == "ready"){
             return true; 
     }
