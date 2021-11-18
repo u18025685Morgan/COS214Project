@@ -8,7 +8,7 @@ protected:
 public:
 	virtual void handle() = 0;
 	virtual RocketState* changeRocketState() = 0;
-	string getrocketState();
+	string getRocketState();
 
 };
 #endif
