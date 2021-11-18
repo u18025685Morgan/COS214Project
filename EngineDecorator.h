@@ -7,7 +7,7 @@ class EngineDecorator : public Engine
     private:
         Engine* engine;
     public:
-        EngineDecorator();
+        EngineDecorator(Engine* e);
         virtual void addEngine(Engine* e);
         Engine* getEngine();
         void setEngine(Engine* e);
