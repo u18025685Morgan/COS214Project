@@ -20,7 +20,7 @@ int main()
     for (int i=0; i<4; i++)
     {
         SpaceX[i] = rockets[i%2]->build();
-        SpaceX[i]->launchRocket();
+        SpaceX[i]->buildRocket();
     }
 
     for (int i=0; i<4; i++)
