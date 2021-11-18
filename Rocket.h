@@ -1,6 +1,7 @@
 #ifndef ROCKET_H
 #define ROCKET_H
 #include "SpaceCommand.h"
+#include "RocketState.h"
 #include "RocketInitialState.h"
 #include <string>
 #include <iostream>
