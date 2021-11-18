@@ -1,13 +1,13 @@
-#include "EngineDecorator.h"
 #include "VacuumMerlinEngine.h"
 #include <string>
 #include <iostream>
 using namespace std;
 
-VacuumMerlinEngine::VacuumMerlinEngine(): EngineDecorator()
-{   
-    //set type of engine to vacuumMerlin using inherited functions
-    setType("VacuumMerlinEngine");
+VacuumMerlinEngine::VacuumMerlinEngine(Engine* e):EngineDecorator(e)
+{
+
+    Engine::setType("VacuumMerlinEngine");
+
     cout<<"Adding a Vacuum Merlin Engine"<<endl;
 }
 
