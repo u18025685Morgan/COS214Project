@@ -3,13 +3,17 @@
 #include <string>
 using namespace std;
 
-EngineDecorator::EngineDecorator()
+EngineDecorator::EngineDecorator(Engine* e)
 {
-    engine = nullptr;
+    if (e != nullptr)
+    {
+        engine = e;
+    }
 }
 
 void EngineDecorator::addEngine(Engine* e)
 {
+    Engine::setType(e->getType());
     cout<<"Adding a new engine"<<endl;
 }
 
