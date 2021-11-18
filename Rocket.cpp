@@ -44,7 +44,7 @@ void Rocket ::Off() //command dp
 }
 
 bool Rocket ::staticFireTest(RocketInitialState* obj){
-    if (obj->getRocketState() == "ready"){
+    if (obj->getrocketState() == "ready"){
             return true; 
     }
     else{
