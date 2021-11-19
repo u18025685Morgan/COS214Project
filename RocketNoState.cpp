@@ -7,3 +7,6 @@ RocketNoState::RocketNoState(){
 void RocketNoState::handle(){
 	cout << "Launch and delivery successful!" << endl;
 }
+RocketState* RocketNoState::changeRocketState(){
+	return this;
+}

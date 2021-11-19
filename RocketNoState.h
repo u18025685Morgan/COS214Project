@@ -7,6 +7,6 @@ public:
 
 	RocketNoState();
 	void handle();
-
+	RocketState* changeRocketState();
 };
 #endif

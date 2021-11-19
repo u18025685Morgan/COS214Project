@@ -7,3 +7,6 @@ StageOneSeperationState::StageOneSeperationState(){
 void StageOneSeperationState::handle(){
 	cout << "Stage one is seperating and ready to recovery" << endl;
 }
+StageOneState* StageOneSeperationState::changeStageOneState(){
+	return this;
+}

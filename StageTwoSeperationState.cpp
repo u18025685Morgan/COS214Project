@@ -7,3 +7,6 @@ StageTwoSeperationState::StageTwoSeperationState(){
 void StageTwoSeperationState::handle(){
 	cout << "Cargo in orbit" << endl;
 }
+StageTwoState* StageTwoSeperationState::changeStageTwoState(){
+	return this;
+}

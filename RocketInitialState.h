@@ -1,7 +1,7 @@
 #ifndef ROCKETINITIALSTATE_H
 #define ROCKETINITIALSTATE_H
 #include "RocketState.h"
-#include "StaticFireState.h"
+#include "RocketStaticFireState.h"
 class RocketInitialState : public RocketState{
 public:
 

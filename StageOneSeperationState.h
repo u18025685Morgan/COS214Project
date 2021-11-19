@@ -7,7 +7,7 @@ public:
 
 	StageOneSeperationState();
 	void handle();
-
+  StageOneState* changeStageOneState();
 
 };
 #endif
