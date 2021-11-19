@@ -26,6 +26,10 @@ void Rocket::setName(string n)
     name = n;
 }
 
+void Rocket::setNumEngines(int num){
+    numEngines = num;
+}
+
 void Rocket::launchRocket()
 {
     launch();
