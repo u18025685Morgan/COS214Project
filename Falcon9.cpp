@@ -50,17 +50,17 @@ void Falcon9::launch(){
 	//check if staticfire test succesful
 	if ( r->staticFireTest(rState) == true){
 		cout<<"Static Fire Test: SUCCESSFUL "<<endl;
-		cout<<"step2"<<endl; 
+		
 		
 		rState->handle();
-		cout<<"step3"<<endl;
+		
 		      
 		//change to staticFireState
 		rState->changeRocketState();
 		rState = new RocketStaticFireState();
 		//the rocket is now undergoing static fire testing 
 		//rState->handle();
-		cout<<"step4"<<endl;
+		
 		
 		//command Turn on rocket 
 		tOn = new TurnOn(r);
