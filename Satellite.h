@@ -29,6 +29,8 @@ public:
     void communicate(Satellite* ab);
     void setName(string n);
     string getName();
+ Satellite *clone();
+ 
 
 
     
