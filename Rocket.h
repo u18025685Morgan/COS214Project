@@ -17,6 +17,7 @@ class Rocket : public SpaceCommand    //The Product participant of the Factory M
     private:
         string name;                  //A way to see with what type of rocket you are working with.
         Engine** e;                   //Added by Yane at 16:18
+        int numEngines;
     public:
         Rocket();                     //Default constructor.
         Rocket(string rocketname);    //Constructor taking the name of the rocket as a parameeter.
