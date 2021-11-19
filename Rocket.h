@@ -25,13 +25,14 @@ class Rocket : public SpaceCommand    //The Product participant of the Factory M
         void launchRocket();
         void buildRocket();           //Added by Yane at 16:18
         void print();
-
+        void setNumEngines(int num);    //added by Nasiphi
         void On();                    //turns Rocket on ->(Command dp)
         void Off();                   //turns Rocket off ->(Command dp)
         bool staticFireTest(RocketState* obj); // function that checks state of rocket, if true then test successful
-
+        
+         virtual void launch() = 0;       //virtual launch 
     protected:
-        virtual void launch() = 0;
+       
         virtual void build() = 0;    //Added by Yane at 16:18
 
 };
