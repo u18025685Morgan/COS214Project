@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class Engine {
+class Engine {                             //Component paricipant of Decorator DP
     private:
         string engineType;                 //String variable to distinguish between the types of engines (VacuumMerlin/Merlin)
         int numEngines;                    //Number of engines (to be set when stages are implemented)
@@ -32,7 +32,7 @@ class Engine {
         void Off();                         //turns Engine Off command dp
 };
 
-class Core : public Engine
+class Core : public Engine //ConcreteComponent paricipant of the Decorator DP.
 {
     public:
         virtual void addEngine(Engine* e)
