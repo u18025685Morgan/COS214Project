@@ -1,5 +1,12 @@
 #include <iostream>
+//Mediator needs
+#include "GroundReceiver.h"
+#include "Satellite.h"
+#include "Starlink.h"
+#include <string>
+#include <vector>
 
+//Command needs
 #include "Command.h"
 #include "Button.h"
 #include "TurnOn.h"
@@ -8,6 +15,28 @@
 #include "Engine.h"
 
 using namespace std;
+
+void testingMediator()
+{
+    // 1.   creation
+    GroundReceiver* GR = new GroundReceiver();
+    Satellite* satList[3];
+    satList[0] = new Starlink(GR,"ST01");
+    satList[1] = new Starlink(GR,"ST02");
+    satList[2] = new Starlink(GR,"ST03");
+
+    // 2. send message
+    satList[0]->setMessage("There is a problem in section 3\n");
+
+    //3. what is message
+    cout << satList[1]->getMessage();
+
+    //4. Deletion
+    for(int i=0  ;  i<3  ;  i++)
+        delete satList[i];
+    delete GR;
+
+}
 
 void testCommand_Rocket()
 {
@@ -59,10 +88,11 @@ void testCommand_Engine()
 
 
 
-
 int main()
 {
-    testCommand_Rocket();
+    testingMediator();
     testCommand_Engine();
+    testCommand_Rocket();
+
     return 0;
 }

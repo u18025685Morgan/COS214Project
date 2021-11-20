@@ -1,18 +1,21 @@
-//
-// Created by lisar on 2021/11/09.
-//
+/**
+ *
+ * **/
 
 #include "Satellite.h"
 #include <string>
 
-Satellite :: Satellite(SpaceCommand* sc)    //mediator dp
+using namespace std;
+
+Satellite :: Satellite(GroundReceiver* gr,string n)
 {
-    SC = sc;
+    GR = gr;
+    name = n;
 }
 
 void Satellite :: MessageChanged()          //mediator dp
 {
-    SC->notify(this);
+    GR->notify(this);
 }
 
 string Satellite :: getMessage()              //mediator dp
@@ -25,3 +28,9 @@ void Satellite :: setMessage(string msg)    //mediator dp
     message = msg;
     MessageChanged();
 }
+
+string Satellite :: getName()
+{
+    return name;
+}
+
