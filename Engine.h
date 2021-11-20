@@ -1,7 +1,7 @@
 /**
  * Receiver participant for Command design pattern
  * //Nasiphi can you add what participant this has for you for your design pattern
- * //Yane can you add what participant this has for you for your design pattern
+ * //Engine is the Component participant and Core is the ConcreteComponent participant of the Decorator design pattern.
  * **/
 
 #ifndef ENGINE_H
