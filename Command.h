@@ -1,23 +1,27 @@
-//
-// Created by lisar on 2021/11/16.
-//
+/**
+ * Command participant for Command Design Pattern
+ * **/
 
 #ifndef COMMAND_H
 #define COMMAND_H
 
 #include "Rocket.h"
+#include "Engine.h"
 
 class Command {
-private:
-    Rocket* reciever;
+    private:
+        Rocket* RocketReceiver;
+        Engine* EngineReceiver;
 
-public:
-    Command(Rocket* r);
-    virtual void execute()=0;
-    virtual void undo()=0;
+    public:
+        Command(Rocket* r);
+        Command(Engine* e);
+        virtual void execute()=0;
+        virtual void undo()=0;
 
-    Rocket* getReciever();
+        Rocket* getRocketReceiver();
+        Engine* getEngineReceiver();
 };
 
 
-#endif //COS214PROJECT_MAIN_COMMAND_H
+#endif //COMMAND_H

@@ -1,4 +1,11 @@
+/** DESIGN PATTERNS
+ * Command dp
+ *
+ * **/
+
 #include "Engine.h"
+#include <iostream>
+
 using namespace std;
 
 Engine::Engine()
@@ -41,4 +48,14 @@ int Engine::getNumEngines()
 void Engine::setNumEngines(int nr)
 {
     numEngines = nr;
+}
+
+void Engine ::On()                  //command dp
+{
+    cout << "Turning Engine on\n";
+}
+
+void Engine ::Off()                 //command dp
+{
+    cout << "Turning Engine off\n";
 }

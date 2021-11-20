@@ -1,18 +1,27 @@
-//
-// Created by lisar on 2021/11/16.
-//
+/**
+ * command dp
+ * **/
 
 #include "TurnOn.h"
 
 TurnOn ::TurnOn(Rocket* r) : Command(r)
 {}
 
+TurnOn ::TurnOn(Engine* e) : Command(e)
+{}
+
 void TurnOn ::execute()
 {
-    getReciever()->On();
+    if(getEngineReceiver()!= nullptr)
+        getEngineReceiver()->On();
+    else
+        getRocketReceiver()->On();
 }
 
 void TurnOn ::undo()
 {
-    getReciever()->Off();
+    if(getEngineReceiver()!= nullptr)
+        getEngineReceiver()->Off();
+    else
+        getRocketReceiver()->Off();
 }

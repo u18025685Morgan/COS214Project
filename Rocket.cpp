@@ -1,3 +1,8 @@
+/** DESIGN PATTERNS:
+ * Command dp
+ *
+ * **/
+
 #include "Rocket.h"
 #include "RocketState.h"
 #include "RocketInitialState.h"
@@ -36,7 +41,7 @@ void Rocket::launchRocket()
 }
 
 void Rocket::print(){
-    cout<<"This is a "<< getName() << " type Rocket"<<endl; 
+    cout<<"This is a "<< getName() << " type Rocket"<<endl;
 }
 
 //commmand design pattern
@@ -52,10 +57,10 @@ void Rocket ::Off() //command dp
 
 bool Rocket ::staticFireTest(RocketState* obj){
     if (obj->getRocketState() == "ready"){
-            return true; 
+        return true;
     }
     else{
-        return false; 
+        return false;
     }
 }
 

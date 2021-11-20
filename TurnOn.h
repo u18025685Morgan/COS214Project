@@ -1,18 +1,19 @@
-//
-// Created by lisar on 2021/11/16.
-//
+/**
+ * Concrete Command participant of Command design pattern
+ * **/
 
-#ifndef COS214PROJECT_MAIN_TURNON_H
-#define COS214PROJECT_MAIN_TURNON_H
+#ifndef TURNON_H
+#define TURNON_H
 
 #include "Command.h"
 
-class TurnOn : public Command {
+class TurnOn : public Command{
 public:
     TurnOn(Rocket* r);
+    TurnOn(Engine* e);
     void execute();
     void undo();
 };
 
 
-#endif //COS214PROJECT_MAIN_TURNON_H
+#endif //INC_1__COMMAND_DESIGN_PATTERN_TURNON_H

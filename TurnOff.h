@@ -1,18 +1,19 @@
-//
-// Created by lisar on 2021/11/16.
-//
+/**
+ * Concrete Command participant of Command design Pattern
+ * **/
 
-#ifndef COS214PROJECT_MAIN_TURNOFF_H
-#define COS214PROJECT_MAIN_TURNOFF_H
+#ifndef TURNOFF_H
+#define TURNOFF_H
 
 #include "Command.h"
 
 class TurnOff : public Command{
-public:
-    TurnOff(Rocket* r);
-    void execute();
-    void undo();
+    public:
+        TurnOff(Rocket* r);
+        TurnOff(Engine* e);
+        void execute();
+        void undo();
 };
 
 
-#endif //COS214PROJECT_MAIN_TURNOFF_H
+#endif //TURNOFF_H

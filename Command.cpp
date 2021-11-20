@@ -1,15 +1,25 @@
-//
-// Created by lisar on 2021/11/16.
-//
+/**
+ * works with engines and rockets
+ * **/
 
 #include "Command.h"
 
 Command ::Command(Rocket* r)
 {
-    reciever = r;
+    RocketReceiver = r;
 }
 
-Rocket* Command ::getReciever()
+Command ::Command(Engine* e)
 {
-    return reciever;
+    EngineReceiver = e;
+}
+
+Rocket* Command ::getRocketReceiver()
+{
+    return RocketReceiver;
+}
+
+Engine* Command ::getEngineReceiver()
+{
+    return EngineReceiver;
 }

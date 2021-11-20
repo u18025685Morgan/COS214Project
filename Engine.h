@@ -1,17 +1,22 @@
+/**
+ * Receiver participant for Command design pattern
+ * //Nasiphi can you add what participant this has for you for your design pattern
+ * //Yane can you add what participant this has for you for your design pattern
+ * **/
+
 #ifndef ENGINE_H
 #define ENGINE_H
+
 #include <string>
 #include <iostream>
 
-
-
 using namespace std;
 
-class Engine
-{
+class Engine {
     private:
         string engineType;                 //String variable to distinguish between the types of engines (VacuumMerlin/Merlin)
         int numEngines;                    //Number of engines (to be set when stages are implemented)
+
     public:
         Engine();                          //Default constructor
         Engine(string etype);              //Constructor taking the type of engine as a parameter.
@@ -23,16 +28,16 @@ class Engine
         void setType(string et);           //Sets the type of engine.
         int getNumEngines();               //Returns the number of engines.
         void setNumEngines(int nr);        //Sets the number of engines.
-      
-
+        void On();                          //turns Engine on command dp
+        void Off();                         //turns Engine Off command dp
 };
 
 class Core : public Engine
 {
     public:
         virtual void addEngine(Engine* e)
-        {}
+        {};
 
 };
 
-#endif
+#endif //ENGINE_H
