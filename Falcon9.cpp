@@ -144,6 +144,8 @@ void Falcon9::launch(){
 	}
 }
 	
+void Falcon9::print(){
+	cout<<"This is a FALCON 9 type Rocket"<<endl;
 
 
 Falcon9::~Falcon9(){
