@@ -40,9 +40,9 @@ void Rocket::launchRocket()
     launch();
 }
 
-void Rocket::print(){
+/*void Rocket::print(){
     cout<<"This is a "<< getName() << " type Rocket"<<endl;
-}
+}*/
 
 //commmand design pattern
 void Rocket ::On() //command dp
