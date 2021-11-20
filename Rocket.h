@@ -30,7 +30,7 @@ class Rocket : public SpaceCommand
             void setName(string n);       //Sets the name/type of rocket.
             void launchRocket();
             void buildRocket();           //Added by Yane at 16:18
-            void print();
+            virtual void print();
             void setNumEngines(int num);    //added by Nasiphi
             void On();                    //turns Rocket on ->(Command dp)
             void Off();                   //turns Rocket off ->(Command dp)
