@@ -8,7 +8,7 @@ main: $(ofiles)
 Main.o: Main.cpp Rocket.h RocketFactory.h Falcon9Factory.h FalconHeavyFactory.h Falcon9.h FalconHeavy.h
 	$(gpp_o) Main.cpp
 
-Rocket.o: Rocket.h Rocket.cpp
+Rocket.o: Rocket.h Rocket.cpp Engine.h EngineDecorator.h MerlinEngine.h VacuumMerlinEngine.h
 	$(gpp_o) Rocket.cpp
 
 RocketFactory.o: RocketFactory.h RocketFactory.cpp Rocket.h
