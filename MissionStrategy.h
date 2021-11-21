@@ -2,6 +2,9 @@
 #define MISSIONSTRATEGY_H
 #include <iostream>
 #include "RocketFactory.h"
+#include "Rocket.h"      
+#include "Engine.h"
+#include "Dragon.h"
 using namespace std;
 
 class MissionStrategy
