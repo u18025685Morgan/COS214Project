@@ -31,6 +31,7 @@ Falcon9::Falcon9(string nameR):Rocket(nameR)
             {
                 if(i % 2 == 0)
                             Sats[i] = new StarLink();
+			    
                 else
                     {
                           Sats[i] = new GroundReciever();
