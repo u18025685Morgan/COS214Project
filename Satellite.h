@@ -25,10 +25,13 @@ class Satellite {
         virtual void setMessage(string msg);                //mediator dp
 
         Satellite(string name);
-        void launch();
-        void communicate(Satellite* ab);
-        void setName(string n);
-        string getName();
+       virtual void launch()=0;
+      //  void communicate(Satellite* ab);
+       virtual void setName(string n) = 0;
+       virtual string getName() = 0;
+        virtual void land() =0;
+        virtual void getType() = 0;
+    v
 
 };
 
