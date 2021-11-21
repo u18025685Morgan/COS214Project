@@ -30,7 +30,7 @@ class Satellite {
        virtual void setName(string n) = 0;
        virtual string getName() = 0;
         virtual void land() =0;
-        virtual void getType() = 0;
+        virtual string getType() = 0;
     
 
 };
