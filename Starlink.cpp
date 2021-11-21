@@ -5,7 +5,7 @@ StarLink :: StarLink()
 {
 
 }
-StarLink :: StarLink(string n)
+StarLink :: Starlink(string n)
 {
     name = n;
 }
