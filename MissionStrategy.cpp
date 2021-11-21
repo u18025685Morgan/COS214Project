@@ -1,4 +1,4 @@
-#include "missionStrategy.h"
+#include "MissionStrategy.h"
 
 MissionStrategy::MissionStrategy(string name)
 {
