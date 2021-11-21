@@ -7,7 +7,7 @@
 class VacuumMerlinEngine : public EngineDecorator
 {
     public:
-        VacuumMerlinEngine();   //added by Nasiphi -17h09
+       
         VacuumMerlinEngine(Engine* e); 
         ~VacuumMerlinEngine();
 
