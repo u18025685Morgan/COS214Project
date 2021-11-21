@@ -12,7 +12,7 @@ class DroneShip : public SpaceCommand{
 		bool landed;
 	public:
 		DroneShip();
-		void setLanded();
+		void setLanded(bool str);
 		bool getLanded();
 		// print is pure virtual in spacecommand, therefore virtual here
 		virtual void print();
