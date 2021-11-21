@@ -28,6 +28,7 @@ class FalconHeavy : public Rocket //A ConcreteProduct participant of the Factory
     public:
         FalconHeavy(string  = "Falcon Heavy");
         virtual void launch();
+        virtual void print();
         ~FalconHeavy();
     protected:
         
