@@ -9,7 +9,7 @@
 #include "VacuumMerlinEngine.h"
 #include "Satellite.h"
 #include "Starlink.h"
-#include "GroundReciever.h"
+#include "GroundReceiver.h"
 
 #include "RocketState.h"
 #include "RocketInitialState.h"
