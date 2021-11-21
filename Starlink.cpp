@@ -1,30 +1,30 @@
 #include "Starlink.h"
 
 
-StarLink :: StarLink()
+Starlink :: StarLink()
 {
 
 }
-StarLink :: Starlink(string n)
+Starlink :: Starlink(string n)
 {
     name = n;
 }
 
-void StarLink :: launch()
+void Starlink :: launch()
 {
          cout << "Ground Receiver " << name << "is launched" << endl;
 
 }
 
-string StarLink :: getType()
+string Starlink :: getType()
 {
-    return "StarLink Satellite ";
+    return "Starlink Satellite ";
 }
-void StarLink :: land()
+void Starlink :: land()
 {
     cout << "Starlink Satellite is landing" << endl;
 }
-string StarLink :: getName()
+string Starlink :: getName()
 {
     return name;
 }
@@ -33,9 +33,9 @@ void Starlink :: setName(string n)
     name = n;
 }
 
-string StarLink :: getType()
+string Starlink :: getType()
 {
-    return "StarLink Satellite";
+    return "Starlink Satellite";
 }
 
 
