@@ -1,4 +1,4 @@
-#include "Mission.h"
+#include "mission.h"
 
 Mission::Mission(MissionStrategy * strategy)
 {
