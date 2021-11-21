@@ -1,18 +1,11 @@
 #include "Starlink.h"
 
-
-Starlink :: StarLink()
-{
-
-}
-Starlink :: Starlink(string n)
-{
-    name = n;
-}
+Starlink :: Starlink(string n) : Satellite(n)
+{}
 
 void Starlink :: launch()
 {
-         cout << "Ground Receiver " << name << "is launched" << endl;
+    cout << "Ground Receiver " << name << "is launched" << endl;
 
 }
 
@@ -32,13 +25,3 @@ void Starlink :: setName(string n)
 {
     name = n;
 }
-
-string Starlink :: getType()
-{
-    return "Starlink Satellite";
-}
-
-
-
-
-
