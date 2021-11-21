@@ -31,6 +31,8 @@ class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Met
         Falcon9(string = "Falcon 9"); //Added by Yane at 16:30
         virtual void print();       //added by Nasiphi
         virtual void launch();
+    void activate_satelites();
+        void add_satellites();
         ~Falcon9();
    
        
