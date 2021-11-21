@@ -144,7 +144,10 @@ void FalconHeavy::launch(){
 	cout << "Static Fire Test Was Unsuccessful, launching cannot commence"<<endl;
 	}
 }
-	
+void FalconHeavy::print()
+{
+	cout<<"This is a Falcon Heavy type rocket."<<endl;	
+}
 
 
 FalconHeavy::~FalconHeavy(){
