@@ -16,20 +16,25 @@ using namespace std;
 
 class Satellite;        //mediator dp DO NOT REMOVE THIS
 
-class GroundReceiver {
-    private:
-        vector<Satellite*> satelliteList;               //mediator dp
+class GroundReceiver{
+private:
+    vector<Satellite*> satelliteList;               //mediator dp
 
-        string name;//sengi
-        Satellite* GRPrototype;//sengi
+    string name;//sengi
+    Satellite* GRPrototype;//sengi
 
-    public:
-        GroundReceiver();                               //mediator dp
-        ~GroundReceiver();                              //mediator dp
-        void notify(Satellite* sat);                    //mediator dp
-        GroundReceiver* createReceiver();               //mediator dp
+public:
+    GroundReceiver();                               //mediator dp
+    ~GroundReceiver();                              //mediator dp
+    void notify(Satellite* sat);                    //mediator dp
+    GroundReceiver* createReceiver();               //mediator dp
 
-        Satellite* clone(); //sengi
+    GroundReceiver(string n);       //prototype dp
+    Satellite *clone();
+    void launch();
+    string getType();
+    void land();
+
 
 
 };

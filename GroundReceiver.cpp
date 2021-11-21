@@ -22,22 +22,40 @@ void GroundReceiver ::notify(Satellite *sat)        //mediator dp
 
 }
 
-GroundReceiver* GroundReceiver :: createReceiver()
+GroundReceiver* GroundReceiver :: createReceiver() //mediator dp
 {
     return new GroundReceiver;
 }
 
-GroundReciever :: GroundReciever(string n)
+
+
+GroundReceiver :: GroundReceiver(string n)
 {
     name = n;
 }
 
-void GroundReciever :: launch()
+void GroundReceiver :: launch()
 {
     cout << "Ground Receiver " << name << "is launched" << endl;
 }
 
-Satellite* GroundReciever :: clone()
+string GroundReceiver :: getType()
 {
-
+    return "GroundReceiver Satellite";
 }
+
+void GroundReceiver :: land()
+{
+    cout << " GroundReceiver Satellite i+s landing" << endl;
+}
+
+/*
+string Starlink :: getName()
+{
+    return name;
+}
+void Starlink :: setName(string n)
+{
+    name = n;
+}
+*/
