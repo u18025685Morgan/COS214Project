@@ -1,7 +1,8 @@
 #ifndef MISSION_H
 #define MISSION_H
 #include <iostream>
-using namespace
+using namespace std;
+#include "Engine.h"
 
 #include "missionStrategy.h"
 

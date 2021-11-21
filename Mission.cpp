@@ -5,6 +5,7 @@ Mission::Mission(MissionStrategy * strategy)
     this->strategy = strategy;
 }
 
+
 Mission::~Mission()
 {
     cout << "Mission Course Completed" << endl;
