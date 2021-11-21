@@ -3,9 +3,7 @@
 #include <iostream>
 using namespace std;
 
-//added by Nasiphi -17h07
-MerlinEngine:: MerlinEngine(){
-}
+
 
 MerlinEngine::MerlinEngine(Engine* e):EngineDecorator(e)
 {
