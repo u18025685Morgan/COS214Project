@@ -22,7 +22,7 @@ class Starlink :public Satellite{
         string getMessage();                        //mediator dp
         void setMessage(string msg);                //mediator dp
         void MessageChanged();                      //mediator dp
-        StarLink(string n);
+        Starlink(string n);
         void launch();
         string getName();
         void setName();
