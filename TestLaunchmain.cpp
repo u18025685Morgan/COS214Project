@@ -11,8 +11,13 @@ int main(){
 	
 	Rocket* falcH = new FalconHeavy();
 	Rocket* falc9 = new Falcon9();
+	//spacecommand object calling print 
+	SpaceCommand* r = new Falcon9();
+	
 	
 	falcH->launch();
+	//print this is a Falcon9 rocket 
+	r->print();
 	falc9->launch();
 	
 	
