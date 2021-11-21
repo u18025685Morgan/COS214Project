@@ -1,6 +1,6 @@
 /** DESIGN PATTERNS:
  * Command dp
- *
+ * Factory Method Design Pattern Product Participant
  * **/
 
 #include "Rocket.h"
