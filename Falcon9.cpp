@@ -24,7 +24,20 @@ using namespace std;
 
 Falcon9::Falcon9(string nameR):Rocket(nameR)
 {
-
+	max_Satellite_Size = SIIZE;
+    Sats = new Satellite*[max_Satellite_Size];
+    
+        for(int i = 0; i < 60; i++)
+            {
+                if(i % 2 == 0)
+                            Sats[0] = new StarLink();
+                else
+                    {
+                          Sats[1] = new GroundReciever();
+                      
+                    }
+            }
+    
 }
 
 void Falcon9::build()
