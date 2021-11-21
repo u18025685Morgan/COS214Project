@@ -32,7 +32,7 @@ class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Met
         virtual void print();       //added by Nasiphi
         virtual void launch();
         ~Falcon9();
-        Falcon9()
+   
        
     protected:
         void build(); //Added by Yane at 16:28
