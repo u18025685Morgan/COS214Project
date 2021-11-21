@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace
 
-#include "missionStrategy.h"
+#include "MissionStrategy.h"
 
 class Mission
 {
