@@ -30,10 +30,10 @@ Falcon9::Falcon9(string nameR):Rocket(nameR)
         for(int i = 0; i < 60; i++)
             {
                 if(i % 2 == 0)
-                            Sats[0] = new StarLink();
+                            Sats[i] = new StarLink();
                 else
                     {
-                          Sats[1] = new GroundReciever();
+                          Sats[i] = new GroundReciever();
                       
                     }
             }
