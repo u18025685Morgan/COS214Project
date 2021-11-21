@@ -26,7 +26,7 @@ int const SIIZE = 60;
 
 Falcon9::Falcon9(string nameR):Rocket(nameR)
 {
-    max_Satellite_Size = SIIZE;
+    int max_Satellite_Size = SIIZE;
     sats = new Satellite*[max_Satellite_Size];
 
     for(int i = 0; i < 60; i++)
