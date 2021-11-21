@@ -33,8 +33,10 @@ void Starlink :: setName(string n)
     name = n;
 }
 
-
-
+string StarLink :: getType()
+{
+    return "StarLink Satellite";
+}
 
 
 
