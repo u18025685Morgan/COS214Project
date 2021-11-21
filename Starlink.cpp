@@ -1,25 +1,10 @@
-/****/
-
 #include "Starlink.h"
-Starlink :: Starlink(GroundReceiver* gr,string n): Satellite(gr,n) //mediator dp
+
+
+StarLink :: StarLink()
 {
-    gr->createReceiver();
+
 }
-
-string Starlink :: getMessage()              //mediator dp
-{
-    return message;
-}
-
-void Starlink :: setMessage(string msg)    //mediator dp
-{
-    message = msg;
-    Satellite :: MessageChanged();
-}
-
-void Starlink ::MessageChanged() {}     //mediator dp
-
-
 StarLink :: StarLink(string n)
 {
     name = n;
@@ -27,11 +12,31 @@ StarLink :: StarLink(string n)
 
 void StarLink :: launch()
 {
-    cout << "Ground Receiver " << name << "is launched" << endl;
+         cout << "Ground Receiver " << name << "is launched" << endl;
 
 }
 
-Satellite* Satellite :: clone()
+string StarLink :: getType()
 {
-    return new Satellite(*this);
+    return "StarLink Satellite ";
 }
+void StarLink :: land()
+{
+    cout << "Starlink Satellite is landing" << endl;
+}
+string StarLink :: getName()
+{
+    return name;
+}
+void Starlink :: setName(string n)
+{
+    name = n;
+}
+
+
+
+
+
+
+
+
