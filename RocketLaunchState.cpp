@@ -1,5 +1,6 @@
 #include "RocketLaunchState.h"
 #include <iostream>
+#include <unistd.h>
 
 RocketLaunchState::RocketLaunchState(){
 	this->rocketState = "launching";
