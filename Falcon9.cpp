@@ -19,6 +19,8 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
+#include <unistd.h>
 
 using namespace std;
 
@@ -26,11 +28,32 @@ int const SIIZE = 60;
 
 Falcon9::Falcon9(string nameR):Rocket(nameR)
 {
-    max_Satellite_Size = SIIZE;
-    sats = new Satellite*[max_Satellite_Size];
+    string s = "Starlink ";
+    
+    sats = new Satellite*[SIIZE];
 
     for(int i = 0; i < 60; i++)
-        sats[i] = new Starlink("");
+    {
+        s += to_string(i+1);
+        sats[i] = new Starlink(s);
+        sats[i]->setName(s);
+        s = "Starlink ";
+
+
+
+
+        
+        
+       
+    }
+
+    cout << "---------60 Starlink Satellites have been deployed by the falcon9 Rocket--------------------" << endl;
+
+        for(int i = 0; i < 60; i+=5)
+            {
+                sleep(1);
+               cout <<  sats[i]->getName() << " has been launched" << endl;
+            }
 }
 
 void Falcon9::build()
@@ -117,7 +140,13 @@ void Falcon9::launch(){
         //rState->chnge
         StageTwoState* stg2 = new StageTwoReadyState();
         stg2->handle();
+        /************************************************************/
 
+
+
+
+
+        /*************************************************************/
         stg2->changeStageTwoState();
         stg2 = new StageTwoLaunchState();
 
@@ -157,12 +186,4 @@ void Falcon9::print(){
 
 Falcon9::~Falcon9(){
     delete r;
-}
-
-void Falcon9::activate_satelites() {
-
-}
-
-void Falcon9::add_satellites() {
-
 }
