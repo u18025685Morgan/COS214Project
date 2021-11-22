@@ -5,7 +5,12 @@
 class FalconHeavyFactory : public RocketFactory //Another ConcreteCreator participant of the Factor Method design pattern.
         {
         protected:
-            Rocket* buildRocket(); //The factory method.
+                /**
+                @brief Outputs a message stating that the rocket is being built.
+                @param none
+                @return Rocket*, a pointer to a Rocket Object.
+                **/     
+                Rocket* buildRocket(); //The factory method.
         };
 
 #endif
