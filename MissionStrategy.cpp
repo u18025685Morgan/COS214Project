@@ -6,7 +6,7 @@
 
 MissionStrategy::MissionStrategy(string name)               //! Constructor that takes the name of the mission strategy as a parameter
 {
-    missionStratName = name;                                //! Also outputs a string that has the name 
+    missionStratName = name;                                //! Also outputs a string that has the name
     cout << "Mission strategy: " << missionStratName << " chosen." << endl;
 }
 
@@ -24,13 +24,15 @@ string MissionStrategy::getName()
     return missionStratName;                //! getter of missionStratName
 }
 
+void MissionStrategy ::buildMission() {}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// RocketStrategy functions
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 RocketStrategy::RocketStrategy() : MissionStrategy("rocket")
 {
-                            //! uses base class constructor to show that a rocket is being chosen
+    //! uses base class constructor to show that a rocket is being chosen
 }
 
 
@@ -71,7 +73,7 @@ void RocketStrategy::buildMission()
 
 EngineStrategy::EngineStrategy() : MissionStrategy("engine")
 {
-                                //! uses base class constructor to show that a rocket is being chosen
+    //! uses base class constructor to show that a rocket is being chosen
 }
 
 
@@ -86,7 +88,7 @@ void EngineStrategy::buildMission()
 
 DragonStrategy::DragonStrategy() : MissionStrategy("engine")
 {
-                                //! uses base class constructor to show that a rocket is being chosen
+    //! uses base class constructor to show that a rocket is being chosen
 }
 
 
