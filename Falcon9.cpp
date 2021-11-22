@@ -26,26 +26,11 @@ int const SIIZE = 60;
 
 Falcon9::Falcon9(string nameR):Rocket(nameR)
 {
-    int max_Satellite_Size = SIIZE;
+    max_Satellite_Size = SIIZE;
     sats = new Satellite*[max_Satellite_Size];
 
     for(int i = 0; i < 60; i++)
-    {
         sats[i] = new Starlink("");
-
-
-
-
-        /*
-        if(i % 2 == 0)
-            sats[i] = new Starlink("");
-
-        else
-        {
-            sats[i] = new Satellite("");//GroundReceiver();
-
-        }*/
-    }
 }
 
 void Falcon9::build()
@@ -172,4 +157,12 @@ void Falcon9::print(){
 
 Falcon9::~Falcon9(){
     delete r;
+}
+
+void Falcon9::activate_satelites() {
+
+}
+
+void Falcon9::add_satellites() {
+
 }
