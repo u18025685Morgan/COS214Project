@@ -28,16 +28,16 @@ using namespace std;
 class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Method design pattern.
         {
         public:
-            Falcon9(string = "Falcon 9"); //Added by Yane at 16:30
+            Falcon9(string = "Falcon 9");       //Constructor that sets the name of the rocket by default.
 
-            virtual void print();       // Print function that display what type of Rocket is being used, in this case a Falcon9
-            virtual void launch();      // Launch function that illustrates the different stages falcon9 goes through
+            virtual void print();               // Print function that display what type of Rocket is being used, in this case a Falcon9
+            virtual void launch();              // Launch function that illustrates the different stages falcon9 goes through
             void activate_satelites();
             void add_satellites();
-            ~Falcon9();
+            ~Falcon9();                         //Destructor
 
         protected:
-             void build();
+             void build();                     //Build function that ouputs the rocket is being build.
              //Added by Yane at 16:28
 
         private:
