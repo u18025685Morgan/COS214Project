@@ -7,11 +7,13 @@
 Command ::Command(Rocket* r)
 {
     RocketReceiver = r;
+    EngineReceiver = nullptr;
 }
 
 Command ::Command(Engine* e)
 {
     EngineReceiver = e;
+    RocketReceiver = nullptr;
 }
 
 Rocket* Command ::getRocketReceiver()
