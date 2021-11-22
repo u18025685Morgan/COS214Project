@@ -33,15 +33,13 @@ void CargoDragonMaker::stageseparation()
     cout<<"--------------------------------------------------------------"<<endl<<endl;
 }
 
-void CargoDragonMaker::setPayloadMass(int a)
+bool CargoDragonMaker::setPayloadMass(int a)
 {
+    payloadmass = a;
     if (payloadmass + a > 6000)
-    {
-        cout<<"WARNING : MAX PAYLOAD MASS REACHED!!! , REDUCE PAYLOAD MASS"<<endl<<endl;
-    }else
-    {
-        this->payloadmass = a;
-    }
+        return false;
+    else
+        return true;
 	
 }
 

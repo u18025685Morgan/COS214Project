@@ -28,7 +28,7 @@ class CrewDragonMaker : public Dragon
             void getCrewInfo();
             int getNumSeatsOccupied();
             int getNumberSeats();
-            void setPayloadMass(int);
+            bool setPayloadMass(int);
             int getPayloadMass();
             void stageseparation();
             void returntoearth();

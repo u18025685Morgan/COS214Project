@@ -35,15 +35,13 @@ int CrewDragonMaker::getNumberSeats()
     return numseats;
 }
 
-void CrewDragonMaker::setPayloadMass(int a)
+bool CrewDragonMaker::setPayloadMass(int a)
 {
+    payloadmass = a;
     if (payloadmass + a > 6000)
-    {
-        cout<<"WARNING : MAX PAYLOAD MASS REACHED, REDUCE PAYLOAD MASS!!!"<<endl<<endl;
-    }else
-    {
-        this->payloadmass = a;
-    }
+        return false;
+    else
+        return true;
 }
 
 int CrewDragonMaker::getPayloadMass()

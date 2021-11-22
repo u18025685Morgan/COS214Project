@@ -10,7 +10,7 @@ class CargoDragonMaker : public Dragon
             ~CargoDragonMaker();
             CargoDragonMaker(string);
             string getName();
-            void setPayloadMass(int);
+            bool setPayloadMass(int);
             int getPayloadMass();
             void stageseparation();
             void returntoearth();
