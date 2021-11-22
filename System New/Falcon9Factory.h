@@ -5,7 +5,12 @@
 class Falcon9Factory : public RocketFactory //A ConcreteCreator participant.
         {
         protected:
-            Rocket* buildRocket(); //The factory method.
+                 /**
+                @brief Outputs a message stating that the rocket is being built.
+                @param none
+                @return Rocket*, a pointer to a Rocket Object.
+                **/    
+                Rocket* buildRocket(); //The factory method.
         };
 
 #endif
