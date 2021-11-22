@@ -4,6 +4,8 @@
 #include "Falcon9Factory.h"
 #include "FalconHeavyFactory.h"
 
+#include "CrewDragonMaker.h"
+
 MissionStrategy::MissionStrategy(string name)               //! Constructor that takes the name of the mission strategy as a parameter
 {
     missionStratName = name;                                //! Also outputs a string that has the name
@@ -86,7 +88,7 @@ void EngineStrategy::buildMission()
 /// DragonStrategy Functions
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-DragonStrategy::DragonStrategy() : MissionStrategy("engine")
+DragonStrategy::DragonStrategy() : MissionStrategy("dragon")
 {
     //! uses base class constructor to show that a rocket is being chosen
 }
@@ -94,5 +96,28 @@ DragonStrategy::DragonStrategy() : MissionStrategy("engine")
 
 void DragonStrategy::buildMission()
 {
-    
+    Dragon* Hogwarts = new CrewDragonMaker("Hogwarts");
+    Hogwarts->selectNumberSeats(7);
+    Hogwarts->insertCrewMember("Tawanda","Male",19,78);
+    Hogwarts->insertCrewMember("Risenga","Male",21,78);
+    Hogwarts->insertCrewMember("Nasiphi","Female",21,65);
+    cout<<"Crew Dragon :"<<Hogwarts->getName()<<endl<<endl;
+    Hogwarts->getCrewInfo();
+    Rocket* falc9 = new Falcon9();
+    SpaceCommand* r = new Falcon9();
+    int mass;
+
+    cout<<"Enter Payload Mass for Crew Dragon "<<Hogwarts->getName()<<" : ";
+    cin>>mass;
+    // Hogwarts->
+    if (Hogwarts->setPayloadMass(mass) == true)
+    {
+        falc9->launch();
+        cout<<endl;
+        Hogwarts->stageseparation();
+    }
+    else
+    {
+        cout<<"WARNING : MAX PAYLOAD MASS REACHED, REDUCE PAYLOAD MASS!!!"<<endl<<endl;
+    }
 }
