@@ -136,6 +136,14 @@ void DragonStrategy::buildMission()
     int crewNum;
     cout << "How many crew members are going on this mission?" << endl;
     cin >> crewNum;
+    
+    while(crewNum > seatNum)
+    {
+        cout << "You can't have more crew members than there are seats!!" << endl;
+        cout << "There are only " << seatNum << " seats" << endl;
+        cout << "How many crew members are going on this mission?" << endl;
+        cin >> crewNum;
+    }
     int count = 1;
 
     while(count <= crewNum)   //! loop through amount of crew members and insert their details
