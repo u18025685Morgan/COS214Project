@@ -9,7 +9,7 @@
 MissionStrategy::MissionStrategy(string name)               //! Constructor that takes the name of the mission strategy as a parameter
 {
     missionStratName = name;                                //! Also outputs a string that has the name
-    cout << "Mission strategy: " << missionStratName << " chosen." << endl;
+    cout << "Mission strategy: " << missionStratName << " is being chosen." << endl;
 }
 
 MissionStrategy::~MissionStrategy()
@@ -28,11 +28,11 @@ string MissionStrategy::getName()
 
 void MissionStrategy::setRocketChoice(Rocket * r)
 {
-    rocketChoice = null;
+    rocketChoice = nullptr;
     rocketChoice = r;
 }
 
-Rocket MissionStrategy::getRocketChoice()
+Rocket* MissionStrategy::getRocketChoice()
 {
     return rocketChoice;
 }
@@ -61,18 +61,18 @@ void RocketStrategy::buildMission()
     {
         RocketFactory * n;
         n = new Falcon9Factory();
-        Falcon9 nine;
+        Falcon9* nine=new Falcon9;
         n->build();                 //! outputs that a Falcon9 is being built
-        nine.buildRocket();         //! actually builds the rocket
+        nine->buildRocket();         //! actually builds the rocket
         setRocketChoice(nine);        //! sets the rocketChoice to be that of Falcon9
     }
     else if (rocket == 2)
     {
         RocketFactory * h;
         h = new FalconHeavyFactory();
-        FalconHeavy heavy;
+        FalconHeavy* heavy = new FalconHeavy;
         h->build();                 //! outputs that a FalconHeavy is being built
-        heavy.buildRocket();        //! actually builds the rocket
+        heavy->buildRocket();        //! actually builds the rocket
         setRocketChoice(heavy);       //! sets the rocketChoice to be that of FalconHeavy
     }
     else
@@ -109,50 +109,58 @@ DragonStrategy::DragonStrategy() : MissionStrategy("dragon")
 
 void DragonStrategy::buildMission()
 {
+    //build rocket
+    MissionStrategy* missionRocket;
+    missionRocket= new RocketStrategy();
+    missionRocket->buildMission();
+
+
+
+
     string crewName;
     cout << "Please insert the name of your crew" << endl;
     cin >> crewName;                                        //! asks the client the name of their crew and then creates a Dragon that has that name
     Dragon* Hogwarts = new CrewDragonMaker(crewName);       //! Creates a new Crew with the inputted name
-    
+
     int seatNum;
     cout << "How many seats do you want in your cockpit?" << endl;
     cin >> seatNum;
-    
+
     while(seatNum > 7 || seatNum <= 0)      //!Check to see if a valid number of seats was inputted
-    {
+        {
         cout << "Invalid seat amount! You can have a maximum of 7 seats and a minimum of 1. How many seats do you want?" << endl;
         cin >> seatNum;
-    }
+        }
     Hogwarts->selectNumberSeats(seatNum);
-    
+
     int crewNum;
     cout << "How many crew members are going on this mission?" << endl;
     cin >> crewNum;
     int count = 1;
-    
-    while(count <= crewNum)   //! loop through amount of crew members and insert their details  
-    {
+
+    while(count <= crewNum)   //! loop through amount of crew members and insert their details
+        {
         string crewName;
         string crewGend;
         int crewAge;
         double crewWeight;
         cout << "Please insert a name for crew member number " << count << ": " << endl;
         cin >> crewName;
-        
+
         cout << "Please insert a gender for crew member number " << count << ": " << endl;
         cin >> crewGend;
-        
+
         cout << "Please insert an age for crew member number " << count << ": " << endl;
         cin >> crewAge;
-        
+
         cout << "Please insert a weight for crew member number " << count << ": " << endl;
         cin >> crewWeight;
-        
+
         Hogwarts->insertCrewMember(crewName,crewGend,crewAge,crewWeight);
-        
+
         count++;
-    }
-    
+        }
+
 
     cout<<"Crew Dragon :"<<Hogwarts->getName()<<endl<<endl;
     Hogwarts->getCrewInfo();
@@ -160,18 +168,20 @@ void DragonStrategy::buildMission()
 
     cout<<"Please Enter the Payload Mass for Crew Dragon: "<<Hogwarts->getName()<<" : ";
     cin>>mass;
-    
+
     while(Hogwarts->setPayloadMass(mass) == false)      //! Check to see if the mass is too big for the Dragon
-    {
-         cout<<"WARNING : MAX PAYLOAD MASS REACHED, REDUCE PAYLOAD MASS!!!"<<endl;
-         cout<<"Please Enter the Payload Mass for Crew Dragon: "<<Hogwarts->getName()<<" : ";
-         cin>>mass;
-    }
-    
-    r = getRocketChoice();
-    
+        {
+        cout<<"WARNING : MAX PAYLOAD MASS REACHED, REDUCE PAYLOAD MASS!!!"<<endl;
+        cout<<"Please Enter the Payload Mass for Crew Dragon: "<<Hogwarts->getName()<<" : ";
+        cin>>mass;
+        }
+
+    Rocket* r = missionRocket->getRocketChoice();
+
     r->launch();
     cout<<endl;
     Hogwarts->stageseparation();
-    
+
+    delete missionRocket;
+
 }
