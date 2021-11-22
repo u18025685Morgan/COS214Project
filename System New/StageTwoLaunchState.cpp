@@ -2,11 +2,11 @@
 #include <iostream>
 
 StageTwoLaunchState::StageTwoLaunchState(){
-    this->stageTwoState = "none";
+	this->stageTwoState = "none";
 }
 void StageTwoLaunchState::handle(){
-    cout << "Ready for orbital control" << endl;
+	cout << "Ready for orbital control" << endl;
 }
 StageTwoState* StageTwoLaunchState::changeStageTwoState(){
-    return new StageTwoSeperationState();
+	return new StageTwoSeperationState();
 }

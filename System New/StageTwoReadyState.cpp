@@ -2,11 +2,11 @@
 #include <iostream>
 
 StageTwoReadyState::StageTwoReadyState(){
-    this->stageTwoState = "ready";
+	this->stageTwoState = "ready";
 }
 void StageTwoReadyState::handle(){
-    cout << "Stage two is ready" << endl;
+	cout << "Stage two is ready" << endl;
 }
 StageTwoState* StageTwoReadyState::changeStageTwoState(){
-    return new StageTwoLaunchState();
+	return new StageTwoLaunchState();
 }

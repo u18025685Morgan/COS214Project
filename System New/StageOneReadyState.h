@@ -1,3 +1,8 @@
+/*!
+   \file "StageOneReadyState"
+   \brief "Ready state for stage one"
+   \author "u19123460"
+*/
 #ifndef STAGEONEREADYSTATE_H
 #define STAGEONEREADYSTATE_H
 #include "StageOneState.h"
@@ -6,9 +11,17 @@
 class StageOneReadyState : public StageOneState{
 public:
 
-    StageOneReadyState();
-    void handle();
-    StageOneState* changeStageOneState();
+	StageOneReadyState();
+	/*!
+		 \brief "Handle the event for this state"
+		 \return "void"
+	*/
+		void handle();
+		/*!
+			 \brief "Changes the state of stage one to the next state"
+			 \return "Object of type StageOneState"
+		*/
+	StageOneState* changeStageOneState();
 
 };
 #endif

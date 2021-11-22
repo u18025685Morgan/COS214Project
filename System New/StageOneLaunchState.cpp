@@ -2,11 +2,11 @@
 #include <iostream>
 
 StageOneLaunchState::StageOneLaunchState(){
-    this->stageOneState = "launch";
+	this->stageOneState = "launch";
 }
 void StageOneLaunchState::handle(){
-    cout << "Launching!" << endl;
+	cout << "Launching!" << endl;
 }
 StageOneState* StageOneLaunchState::changeStageOneState(){
-    return new StageOneSeperationState();
+	return new StageOneSeperationState();
 }

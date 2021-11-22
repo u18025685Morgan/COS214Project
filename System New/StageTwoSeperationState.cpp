@@ -2,11 +2,11 @@
 #include <iostream>
 
 StageTwoSeperationState::StageTwoSeperationState(){
-    this->stageTwoState = "none";
+	this->stageTwoState = "none";
 }
 void StageTwoSeperationState::handle(){
-    cout << "Cargo in orbit" << endl;
+	cout << "Cargo in orbit" << endl;
 }
 StageTwoState* StageTwoSeperationState::changeStageTwoState(){
-    return this;
+	return this;
 }

@@ -2,11 +2,11 @@
 #include <iostream>
 
 StageOneSeperationState::StageOneSeperationState(){
-    this->stageOneState = "seperating";
+	this->stageOneState = "seperating";
 }
 void StageOneSeperationState::handle(){
-    cout << "Stage one is seperating and ready to recovery" << endl;
+	cout << "Stage one is seperating and ready to recovery" << endl;
 }
 StageOneState* StageOneSeperationState::changeStageOneState(){
-    return this;
+	return this;
 }
