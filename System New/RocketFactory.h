@@ -13,7 +13,7 @@ class RocketFactory //The Creator participant of the Factory Method Design Patte
                 **/
                 Rocket* build();
         protected:
-                **
+                /**
                 @brief Outputs a message that shos the rocket is being build.
                 @param none
                 @return Rocket*, a pointer to a Rocket Object.
