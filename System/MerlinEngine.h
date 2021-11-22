@@ -7,8 +7,8 @@
 class MerlinEngine : public EngineDecorator
         {
         public:
-            MerlinEngine(Engine* e);
-            ~MerlinEngine();
+            MerlinEngine(Engine* e); //Constructor that takes an Engine object as paramter.
+            ~MerlinEngine(); //Default destructor.
        
 
         };
