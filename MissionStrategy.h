@@ -12,14 +12,15 @@ class MissionStrategy           //! Strategy class of the Strategy design patter
 private:
     string missionStratName;    //! given every mission strategy a name to keep track
     Rocket * rocketChoice;      //! shows the type of rocket used in the strategy
-    Engine * engineChoice;      //! shows the type of engine used in the strategy
-    Dragon * dragonChoice;      //! shows the type of dragon used in the strategy
+ 
 public:
     MissionStrategy(string name);   //! Constructor that takes the name of the mission as a parameter
     ~MissionStrategy();             //! Destructor 
     virtual void buildMission();    //! virtual function that builds specific parts of the mission depending on what the client wants
     void setName(string n);         //! setter function to set the name of the mission strategy
     string getName();               //! getter function to get the name of the mission strategy
+    void setRocketChoice(Rocket * r); //! setter function to set the rocketChoice
+    Rocket getRocketChoice();       //! getter function to ger the rocketChoice
     
     
 };
