@@ -36,7 +36,7 @@ class Rocket : public SpaceCommand
             void Off();                   //turns Rocket off ->(Command dp)
             bool staticFireTest(RocketState* obj); // function that checks state of rocket, if true then test successful
 
-            virtual void launch() = 0;       //virtual launch
+            virtual void launch() = 0;       //a pure virtual launch function that is defined in respective concrete classes 
 
         protected:
 
