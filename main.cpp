@@ -1,48 +1,29 @@
-#include <iostream>
-//Mediator needs
-#include "GroundReceiver.h"
-#include "Satellite.h"
-#include "Starlink.h"
-#include <string>
-#include <vector>
+#include "Rocket.h"
+#include "RocketFactory.h"
+#include "Falcon9Factory.h"
+#include "FalconHeavyFactory.h"
+#include "Falcon9.h"
+#include "FalconHeavy.h"
 
-//Command needs
 #include "Command.h"
 #include "Button.h"
 #include "TurnOn.h"
 #include "TurnOff.h"
-#include "Rocket.h"
-#include "Engine.h"
 
+#include "Mission.h"
+#include "MissionStrategy.h"
+
+#include "CrewDragonMaker.h"
+
+#include <iostream>
+#include <string>
 using namespace std;
 
-void testingMediator()
+void Command_designPattern()
 {
-    // 1.   creation
-    GroundReceiver* GR = new GroundReceiver();
-    Satellite* satList[3];
-    satList[0] = new Starlink(GR,"ST01");
-    satList[1] = new Starlink(GR,"ST02");
-    satList[2] = new Starlink(GR,"ST03");
-
-    // 2. send message
-    satList[0]->setMessage("There is a problem in section 3\n");
-
-    //3. what is message
-    cout << satList[1]->getMessage();
-
-    //4. Deletion
-    for(int i=0  ;  i<3  ;  i++)
-        delete satList[i];
-    delete GR;
-
-}
-
-void testCommand_Rocket()
-{
-    cout << "How to use command design pattern with Rocket\n";
+    cout << "How to use command design pattern\n";
     //creation
-    Rocket* rocket = new Rocket();            //receiver
+    Rocket* rocket = new FalconHeavy();            //receiver
     Command* on  = new TurnOn(rocket);      //command
     Command* off  = new TurnOff(rocket);    //command
     Button* onButton = new Button(on);      //invoker
@@ -62,37 +43,108 @@ void testCommand_Rocket()
     delete rocket;
 }
 
-void testCommand_Engine()
+void test1()
 {
-    cout << "How to use command design pattern with Engine\n";
-    //creation
-    Engine* engine = new Engine();            //receiver
-    Command* on  = new TurnOn(engine);      //command
-    Command* off  = new TurnOff(engine);    //command
-    Button* onButton = new Button(on);      //invoker
-    Button* offButton = new Button(off);    //invoker
+    //cout<<"Testing code and compilation."<<endl;
+    RocketFactory* rockets[2];
+    rockets[0] = new FalconHeavyFactory();
+    rockets[1] = new Falcon9Factory();
 
-    //turn Engine on
-    onButton->press();
+    Rocket* SpaceX[4];
 
-    //turn Engine off
-    offButton->press();
+    for (int i=0; i<4; i++)
+    {
+        SpaceX[i] = rockets[i%2]->build();
+        SpaceX[i]->launchRocket();
+    }
 
-    //deletion
-    delete offButton;
-    delete onButton;
-    delete off;
-    delete on;
-    delete engine;
+    for (int i=0; i<4; i++)
+    {
+        delete SpaceX[i];
+    }
+
+    for (int i=0; i<2; i++)
+    {
+        delete rockets[i];
+    }
 }
 
+void testStrategy()
+{
+    MissionStrategy* mission[2];            //Context
 
+    // Three contexts following different strategies
+    mission[0]= new RocketStrategy();
+    mission[1]= new DragonStrategy();
+
+    for(int i=0  ;  i<2  ;  i++)
+        mission[i]->buildMission();
+
+    for(int i=0  ;  i<2  ;  i++)
+        delete mission[i];
+}
+
+void testDragonStrategy()
+{
+    MissionStrategy* mission;            //Context
+
+    // Three contexts following different strategies
+    mission= new DragonStrategy();
+
+        mission->buildMission();
+
+        delete mission;
+}
+
+void testDragon()
+{
+    Dragon* Hogwarts = new CrewDragonMaker("Hogwarts");
+    Hogwarts->selectNumberSeats(7);
+    Hogwarts->insertCrewMember("Tawanda","Male",19,78);
+    Hogwarts->insertCrewMember("Risenga","Male",21,78);
+    Hogwarts->insertCrewMember("Nasiphi","Female",21,65);
+    cout<<"Crew Dragon :"<<Hogwarts->getName()<<endl<<endl;
+    Hogwarts->getCrewInfo();
+    Rocket* falc9 = new Falcon9();
+    SpaceCommand* r = new Falcon9();
+    int mass;
+
+    cout<<"Enter Payload Mass for Crew Dragon "<<Hogwarts->getName()<<" : ";
+    cin>>mass;
+    // Hogwarts->
+    if (Hogwarts->setPayloadMass(mass) == true)
+    {
+        falc9->launch();
+        cout<<endl;
+        Hogwarts->stageseparation();
+    }
+    else
+    {
+        cout<<"WARNING : MAX PAYLOAD MASS REACHED, REDUCE PAYLOAD MASS!!!"<<endl<<endl;
+    }
+}
+
+void test()
+{
+    Rocket* falcH = new FalconHeavy();
+    Rocket* falc9 = new Falcon9();
+    //spacecommand object calling print
+    SpaceCommand* r = new Falcon9();
+
+
+    falcH->launch();
+    //print this is a Falcon9 rocket
+    r->print();
+    falc9->launch();
+}
 
 int main()
 {
-    testingMediator();
-    testCommand_Engine();
-    testCommand_Rocket();
-
+    //test1();
+    testDragonStrategy();
+    //testDragon();
+    //testStrat();
     return 0;
+
 }
+
