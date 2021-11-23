@@ -28,6 +28,11 @@ using namespace std;
 class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Method design pattern.
         {
         public:
+         /**
+    @brief a construuctor that is called when Falcon Heavy objects are instatiated 
+    @param a default string set to "Falcon9"
+    @return does not return a value, as it is a constructor 
+    */
             Falcon9(string = "Falcon 9"); //Added by Yane at 16:30
              
             /**
@@ -52,6 +57,11 @@ class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Met
             ~Falcon9();
 
         protected:
+         /**
+               @brief  build function that displays what type of function  is built, in this case Falcon9
+               @param none 
+               @return no return value, its a void 
+                */
              void build();
              //Added by Yane at 16:28
 
