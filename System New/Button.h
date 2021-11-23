@@ -9,10 +9,10 @@
 
 class Button {
 private:
-    Command* command;
+    Command* command;       //command attribute
 
 public:
-    Button(Command* c);
+    Button(Command* c);     //constructor that initailises command attribute
     void press();
 };
 
