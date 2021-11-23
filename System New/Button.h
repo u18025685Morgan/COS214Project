@@ -12,7 +12,18 @@ private:
     Command* command;       //command attribute
 
 public:
-    Button(Command* c);     //constructor that initailises command attribute
+    /**
+        @brief constructor to initialses commad attribute 
+        @param Command object 
+        @return none, its a void
+    */
+    Button(Command* c); 
+    
+    /**
+        @brief function to call Command attribute's execute function 
+        @param none 
+        @return none, its a void
+    */
     void press();
 };
 
