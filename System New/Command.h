@@ -14,13 +14,47 @@ private:
     Engine* EngineReceiver; //receiver attribute of type Engine
 
 public:
-    Command(Rocket* r); //constructor that takes Rocket type if needing to deal with a rocket
-    Command(Engine* e); //constructor that takes Engine type if needing to deal with a engine
-    virtual void execute()=0; //pure virtual execute 
-    virtual void undo()=0;      //pure virtual undo 
+    /**
+        @brief constructor to initialses RocketReceiver attribute 
+        @param Rocket object 
+        @return none, its a void
+    */
+    Command(Rocket* r); 
+    
+    /**
+        @brief constructor to initialses EngineReceiver attribute 
+        @param Engine object 
+        @return none, its a void
+    */
+    Command(Engine* e); 
+    
+    /**
+        @brief pure virtual function that will call object's turnOn or turnOff functions 
+        @param none 
+        @return none, its a void
+    */
+    virtual void execute()=0;
+    
+    /**
+        @brief pure virtual function that will call object's turnOn or turnOff functions opposite of execute
+        @param none 
+        @return none, its a void
+    */
+    virtual void undo()=0;
 
-    Rocket* getRocketReceiver();    //returns the receiver of type Rocket
-    Engine* getEngineReceiver();//returns the receiver of type Engine
+    /**
+        @brief returns RocketReceiver attribute  
+        @param none 
+        @return Rocket 
+    */
+    Rocket* getRocketReceiver(); 
+    
+    /**
+        @brief returns EngineReceiver attribute  
+        @param none 
+        @return Engine 
+    */
+    Engine* getEngineReceiver();
 };
 
 
