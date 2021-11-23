@@ -15,6 +15,6 @@ Mission::~Mission()
 
 void Mission::startMission()
 {
-    return strategy->buildMission();                //! returns the strategy's buildMission() function which is implemented in the
+    return strategy->buildMission();                //! @return void The strategy's buildMission() function which is implemented in the
     //! ConcreteStrategy class
 }
