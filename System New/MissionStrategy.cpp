@@ -7,8 +7,8 @@
 #include "CrewDragonMaker.h"
 #include "CargoDragonMaker.h"
 
-MissionStrategy::MissionStrategy(string name)               //! Constructor that takes the name of the mission strategy as a parameter
-{
+MissionStrategy::MissionStrategy(string name)               //! @brief Constructor that takes the name of the mission strategy as a parameter
+{                                                           //! @param name must be a valid string
     missionStratName = name;                                //! Also outputs a string that has the name
     cout << "Mission strategy: " << missionStratName << " is being chosen." << endl;
 }
@@ -19,24 +19,24 @@ MissionStrategy::~MissionStrategy()
 
 void MissionStrategy::setName(string n)
 {
-    missionStratName = n;                   //! setter of missionStratName
-}
+    missionStratName = n;                   //! @brief setter of missionStratName
+}                                           //! @param n must be a valid string
 
 string MissionStrategy::getName()
 {
-    return missionStratName;                //! getter of missionStratName
-}
+    return missionStratName;                //! @brief getter of missionStratName
+}                                           //! @return string The mission strategy name
 
 void MissionStrategy::setRocketChoice(Rocket * r)
 {
-    rocketChoice = nullptr;
-    rocketChoice = r;
+    rocketChoice = nullptr;                 //! @brief setter for rocketChoice
+    rocketChoice = r;                       //! @param r must be an instantiated Rocket object
 }
 
 Rocket* MissionStrategy::getRocketChoice()
 {
-    return rocketChoice;
-}
+    return rocketChoice;                    //! @brief getter of rocketChoice
+}                                           //! @return Rocket * the rokcet choice
 
 void MissionStrategy ::buildMission() {}
 
@@ -56,7 +56,7 @@ void RocketStrategy::buildMission()
     cout << "What kind of Rocket would you like to use for this mission strategy? 1 - Falcon9, 2 - FalconHeavy" << endl;
     cin >> rocket;
 
-    //! Asks client what they want and then depending on that a rocket is created using the Factory method
+    //! @brief Asks client what they want and then depending on that a rocket is created using the Factory method
 
     if(rocket == 1)
     {
@@ -107,6 +107,7 @@ DragonStrategy::DragonStrategy() : MissionStrategy("dragon")
     //! uses base class constructor to show that a rocket is being chosen
 }
 
+//! @brief asks client what kind of cargo is going to be used in the mission
 
 void DragonStrategy::buildMission()
 {
