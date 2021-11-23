@@ -8,7 +8,8 @@ How to compile the program:
 - once all the files are extracted into a file, open the folder
 - right click and choose the option "open in terminal"
 - there is a makefile presented, so when you are in the terminal, write the command "make" and press enter, your syste will start to compile.
-How to run the program: 
+
+How to run the program:
 - once compilation is down, type in "make run" in the terminal.
 - the system will start up, asking you a series of questions 
 - things to note, payload may not exceed 6000, or else a warning message will be displayed 
