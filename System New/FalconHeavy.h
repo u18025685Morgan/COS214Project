@@ -26,7 +26,18 @@ using namespace std;
 class FalconHeavy : public Rocket //A ConcreteProduct participant of the Factory Method design pattern.
 {
     public:
+    /**
+    @brief a construuctor that is called when Falcon Heavy objects are instatiated 
+    @param a default string set to "Falcon Heavy"
+    @return does not return a value, as it is a constructor 
+    */
         FalconHeavy(string  = "Falcon Heavy");
+    
+        /**
+               @brief  Launch function that illustrates the different stages falcon Heavy goes through
+               @param none 
+               @return no return value, its a void, but prints out the different stages rocket is going through , in launch sequence 
+         */
         virtual void launch();
         ~FalconHeavy();
         virtual void print();
