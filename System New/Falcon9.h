@@ -36,11 +36,11 @@ class Falcon9 : public Rocket //A ConcreteProduct participant of the Factory Met
                @return no return value, its a void 
                 */
             virtual void print(); 
-        /**
+       /**
                @brief  Launch function that illustrates the different stages falcon9 goes through
                @param none 
-               @return no return value, its a void 
-                */
+               @return no return value, its a void, but prints out the different stages rocket is going through , in launch sequence 
+         */
             virtual void launch();     
             void activate_satelites();
             void add_satellites();
