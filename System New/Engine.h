@@ -98,6 +98,11 @@ public:
 class Core : public Engine //ConcreteComponent paricipant of the Decorator DP.
         {
         public:
+      /**
+        @brief a function that will add engine, if needed 
+        @param Engine object 
+        @return none, its a void
+    */
             virtual void addEngine(Engine* e)
             {};
 
