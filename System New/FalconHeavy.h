@@ -39,10 +39,25 @@ class FalconHeavy : public Rocket //A ConcreteProduct participant of the Factory
                @return no return value, its a void, but prints out the different stages rocket is going through , in launch sequence 
          */
         virtual void launch();
+    /**
+               @brief a default constructor that will to deallocate memory
+               @param none 
+               @return no return value 
+         */
         ~FalconHeavy();
+      /**
+               @brief  Print function that display what type of Rocket is being used, in this case a Falcon Heavy
+               @param none 
+               @return no return value, its a void 
+                */
         virtual void print();
 
     protected:
+     /**
+               @brief  build function that displays what type of function  is built, in this case Falcon Heavy
+               @param none 
+               @return no return value, its a void 
+                */
         void build();
 
     private:
