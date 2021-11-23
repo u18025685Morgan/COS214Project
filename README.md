@@ -3,7 +3,7 @@
 This is our COS 214 group project which simulates the launches of missions containing different combinations of Rockets, Engines, and Cargo equipment from SpaceX. 
 
 How to compile the program: 
-- download .zip file of "System" folder
+- download .zip file of "System New" folder
 - once it has dowloaded, extract (by right clicking and choosing "Extract here")
 - once all the files are extracted into a file, open the folder
 - right click and choose the option "open in terminal"
