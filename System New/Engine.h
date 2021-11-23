@@ -1,6 +1,6 @@
 /**
  * Receiver participant for Command design pattern
- * //Nasiphi can you add what participant this has for you for your design pattern
+ * 
  * //Engine is the Component participant and Core is the ConcreteComponent participant of the Decorator design pattern.
  * **/
 
@@ -18,18 +18,81 @@ private:
     int numEngines;                    //Number of engines (to be set when stages are implemented)
 
 public:
+     /**
+          @brief a default constructor that is called, when Engine objects are instantiated 
+          @param none 
+          @return no return value
+     */
     Engine();                          //Default constructor
-    Engine(string etype);              //Constructor taking the type of engine as a parameter.
-    Engine(int n);                     //Constructor taking the number of engines as a parameter.
-    Engine(string etype, int n);       //Constructor taking both the attributes of engines as parameters.
-    virtual ~Engine();                 //Destructor
+     /**
+        @brief  Constructor taking the type of engine as a parameter.
+        @param string that represents the type of engine
+        @return no return value, its a constructor 
+    */
+    Engine(string etype); 
+    
+     /**
+        @brief  Constructor taking the number of engines as a parameter.
+        @param int value that represents the number of engines 
+        @return no return value, its a constructor 
+    */
+    Engine(int n); 
+    
+      /**
+        @brief Constructor taking both the attributes of engines as parameters.
+        @param string variable and int value that represents the type of engine as well as the number of engines 
+        @return no return value, its a constructor
+    */
+    Engine(string etype, int n);       
+    
+     /**
+        @brief Destructor, deallocates memory .
+        @param none
+        @return no return value 
+    */
+    virtual ~Engine();
+     /**
+        @brief Pure virtual function that makes this class abstract
+        @param Engine pointer
+        @return none, its a void 
+    */
     virtual void addEngine(Engine* e) = 0;
-    string getType();                  //Returns the type of engine being worked with.
-    void setType(string et);           //Sets the type of engine.
-    int getNumEngines();               //Returns the number of engines.
-    void setNumEngines(int nr);        //Sets the number of engines.
-    void On();                          //turns Engine on command dp
-    void Off();                         //turns Engine Off command dp
+     /**
+        @brief Returns the type of engine being worked with
+        @param none
+        @return string type 
+    */
+    string getType();                  
+     /**
+        @brief Sets the type of engine.
+        @param string, recieves the type of engine.
+        @return none, its a void 
+    */
+    void setType(string et);           
+    /**
+        @brief Returns the number of engines of respective engine.
+        @param none 
+        @return int, the number of engines
+    */
+    int getNumEngines();               
+     /**
+        @brief Sets the number of engines of respective engine.
+        @param int,  representing thr number of engines 
+        @return none, its a void
+    */
+    void setNumEngines(int nr); 
+    /**
+        @brief turns Engine on command dp.
+        @param none 
+        @return none, its a void
+    */
+    void On();                          
+    /**
+        @brief turns Engine Off command dp
+        @param none 
+        @return none, its a void
+    */
+    void Off();                         
 };
 
 class Core : public Engine //ConcreteComponent paricipant of the Decorator DP.
