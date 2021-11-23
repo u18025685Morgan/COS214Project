@@ -16,13 +16,17 @@ class MissionStrategy           //! Strategy class of the Strategy design patter
 
         public:
             MissionStrategy(string name);   //! Constructor that takes the name of the mission as a parameter
+                                            //! @param name must be a valid string
             ~MissionStrategy();             //! Destructor
             virtual void buildMission();    //! virtual function that builds specific parts of the mission depending on what the client wants
             void setName(string n);         //! setter function to set the name of the mission strategy
+                                            //! @param name must be a valid string
             string getName();               //! getter function to get the name of the mission strategy
+                                            //! @return string The name of the mission strategy
             void setRocketChoice(Rocket * r); //! setter function to set the rocketChoice
-            Rocket* getRocketChoice();       //! getter function to ger the rocketChoice
-
+                                              //! @param r must be an instantiated Rocket
+            Rocket* getRocketChoice();       //! getter function to get the rocketChoice
+                                               //! @return Rocket * The rocket chosen 
 
         };
 
