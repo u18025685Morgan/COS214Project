@@ -31,7 +31,7 @@ public:
     void execute();
     
     /**
-        @brief calls the Rocket or Engine Receiver's on() function
+        @brief calls the Rocket or Engine Receiver's off() function
         @param none
         @return none, it is void 
     */
